@@ -1,0 +1,146 @@
+@import url ('https://fonts.googleapies.com/css?family=Poppins:,300,400,500,600,700,800,900&display=swap');
+*
+{	
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+
+body 
+{
+    min-height: 200vh;
+    overflow-x: hidden;
+    background: #000;
+    color: #fff;
+
+}
+
+header 
+{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo 
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+	margin-right: 20px;
+}
+
+header ul 
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	margin-top: -150px;
+    margin-right: 20px;
+}
+
+header ul li 
+{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a 
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #f0c808;
+    border-radius: 20px;
+}
+
+.slide-in-menu li /* Slide in Menu - https://www.w3schools.com/w3css/w3css_animate.asp - Accessed: 05/04/2024 */
+{
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+    animation-delay: calc(0.2s * var(--index));
+}
+
+@keyframes slideIn /* Fade slide in - https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php - Accessed: 05/04/3034 */
+{
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+header ul li a:hover,
+header ul li a.active 
+{
+    border: 2px solid #E2D8CC;
+    color: #f0c808;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+.image-text-container:nth-child(odd) /* Odd/Even Styling -  https://www.geeksforgeeks.org/how-to-style-even-and-odd-elements-using-css/ Accessed: 14/04/2024 */
+{
+    flex-direction: row;
+}
+
+.image-text-container:nth-child(even) /* Odd/Even Styling -  https://www.geeksforgeeks.org/how-to-style-even-and-odd-elements-using-css/ Accessed: 14/04/2024 */
+{
+    flex-direction: row-reverse;
+}
+
+.image-text-container 
+{
+    display: flex;
+    margin-top: 50px;
+}
+
+.image-container 
+{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.image 
+{
+    max-width: 800px;
+    max-height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.image img 
+{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.text 
+{
+    max-width: 50%;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+

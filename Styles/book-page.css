@@ -1,0 +1,129 @@
+@import url ('https://fonts.googleapies.com/css?family=Poppins:,300,400,500,600,700,800,900&display=swap');
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-family: 'Poppins', sans-serif;
+}
+
+body 
+{
+	background-color: #000000;
+	overscroll-behavior: none;
+}
+
+header 
+{
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+	z-index: 100;
+}
+
+h1 
+{
+    position: absolute;
+    top: 0px;
+    left:80px;
+    font-size: 2em; 
+    color: #fff; 
+	font-family: Courier-new;
+}
+
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 20px;
+}
+
+header ul li a
+{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #f0c808;
+	border-radius: 20px;
+}
+
+.slide-in-menu li /* Slide in Menu - https://www.w3schools.com/w3css/w3css_animate.asp - Accessed: 05/04/2024 */
+{
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+    animation-delay: calc(0.2s * var(--index));
+}
+
+@keyframes slideIn /* Fade slide in - https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php - Accessed: 05/04/3034 */
+{
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    border: 2px solid #E2D8CC; 
+    color: #f0c808;
+    padding: 4px 14px; 
+    border-radius: 20px;
+}
+
+main 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.slider 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2800px;
+	height: 100%;
+}
+
+.slider-inner 
+{
+	position: absolute;
+	top: 15%;
+	height: 70%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.item 
+{
+	position: relative;
+	width: 400px;
+	height: 110%;
+	overflow: hidden;	
+}
+
+.img 
+{
+	position: absolute;
+	left: -60px;
+	width: 500px;
+	height: 90%;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(100%);
+}
